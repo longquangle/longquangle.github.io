@@ -6,7 +6,8 @@
 body {
     font-family: "Gupter", serif;
     width: 100vw;
-    background-color: #b1b1b1;
+    /* background-color: #b1b1b1; */
+    background-color: #c8c8c8;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -21,12 +22,12 @@ body {
     padding: 10px 20px;
     font-size: 25px;
     color: #050505;
-    border-radius: 30px;
     text-decoration: none;
 }
 .nav-bar a:hover {
     color:white;
     background-color: #292929;
+    text-decoration: underline;
 }
 .intro-div {
     background-image: url("../static/image.jpg");
@@ -74,15 +75,28 @@ body {
 }
 
 .project {
-    margin: 10px 70px 10px 20px;
-    font-size: 18px;
+    margin: 20px 70px 10px 0px;
+    font-size: 20px;
 }
 .project-name {
     font-size: 35px;
     font-weight: 500;
-    margin-top: 10px;
+    margin: 10px 10px 10px 0;
 }
 .tech {
     font-family: Consolas, monaco, monospace;
-    font-size: 22px;
+    font-size: 21px;
+}
+.link {
+    font-size: 19px;
+    color: 050505;
+    margin: 0;
+    padding: 0 3px;
+}
+.link:hover {
+    background-color: #050505;
+    color: white;
+}
+.project-line-spacing {
+    margin-bottom: 10px; 
 }

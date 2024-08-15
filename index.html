@@ -7,15 +7,34 @@
     <title>Long Le</title>
 </head>
 <body>
-    <div class="intro-div">
-        <div class="nav-bar">
-            <a class="scroll-button" href="#">About</a>
-            <a class="scroll-button" href="#">Projects</a>
-        </div>
-        <p class="name">Long Le <span style="font-size: 45px;font-weight:300;">Portfolio</span></p>
-        <div class="scroll-down-indicator">Scroll down for more</div>
+    <div id="nav">
+        <li>
+            <a href="#landing"><h3>Long Le</h3></a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
     </div>
-    <div class="section">
+    <section class="landing" id="landing">
+        <div class="intro">
+            <p>Hi, I'm</p>
+            <h3 class="header">Long Le</h3>
+        </div>
+        <a class="scroll" href="#about">
+            scroll down
+            <span></span>
+        </a>
+        <div class="houses">
+            <img src="static/background.jpg" class="layer l3">
+            <img src="static/foreground.png" class="layer l1">
+            <div class="cloud_container" id="cloud_container"></div>
+        </div>
+    </section>
+
+    <div class="section" id="about">
         <div class="sub-section"><p class="about-headline">About</p></div>
         <div class="sub-section">
             <p class="about-paragraph">Hi! I'm Long Le. I am currently an ECE graduate student at University of Southern California. 
@@ -24,13 +43,14 @@
             <p class="about-paragraph">I am excited to contribute my abilities to a dynamic field and collaborate with talented individuals to create impactful solutions.</p>
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="projects">
         <div class="sub-section"><p class="about-headline">Projects</p></div>
         <div class="sub-section">
             <div class="project">
                 <p><span class="project-name">Vietnam War Veterans</span> <a href="https://longquangle.github.io/vietnam-war-casualty-visualization/" class="link">Visualization</a> <a href="https://longquangle.github.io/vnwarproject/" class="link">Python Notebook</a> <a href="https://longqle.pythonanywhere.com" class="link">Database</a></p>
                 <p class="project-tech project-line-spacing">Language/Framework: <span class="tech">Python</span>, <span class="tech">pandas</span> (analysis), <span class="tech">JavaScript</span> (visualization), <span class="tech">D3.js</span> (visualization), <span class="tech">BeautifulSoup4</span> (web scraping), <span class="tech">Flask</span> (database backend), <span class="tech">SQLite3</span> (database)</p>
-                <p class="project-description project-line-spacing">Description: </p>
+                <p class="project-description project-line-spacing">Description (Analysis): Web scraped using BeautifulSoup to obtain the data. Performed exploratory data analysis and feature engineering to extract geological patterns in casualties. Utilized D3.js to </p>
+                <p class="project-description project-line-spacing">Description (Database): Designed schema table and imported the raw data to SQLite3 database. Built a website using Flask framework to query for multiple keywords search with.</p>
             </div>
             <div class="project">
                 <p><span class="project-name">SpotiTube</span> <a href="https://github.com/longquangle/spotitube" class="link">Repo</a></p>

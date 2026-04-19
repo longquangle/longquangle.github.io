@@ -3,75 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
-    <title>Long Le</title>
+    <title>Long Le | Engineer</title>
 </head>
 <body>
-    <div id="nav">
-        <li>
-            <a href="#landing"><h3>Long Le</h3></a>
-        </li>
-        <li>
-            <a href="#about">About</a>
-        </li>
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
-    </div>
-    <section class="landing" id="landing">
-        <div class="intro">
-            <p>Welcome to my personal website</p>
-            <p>Please scroll down for more</p>
+    <div id="cursor-dot"></div>
+    <div id="cursor-follower"></div>
+
+    <div class="noise-overlay"></div>
+
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#landing" class="logo">LONG LE</a>
+            <div class="nav-links">
+                <a href="#about" class="hover-target">01. About</a>
+                <a href="#projects" class="hover-target">02. Work</a>
+            </div>
         </div>
-        <a class="scroll" href="#about">
-            scroll down
-            <span></span>
-        </a>
-        <div class="houses">
-            <img src="static/background.jpg" class="layer l3">
-            <img src="static/foreground.png" class="layer l1">
-            <div class="cloud_container" id="cloud_container"></div>
+    </nav>
+
+    <header class="hero" id="landing">
+        <div class="container">
+            <div class="hero-text-wrapper">
+                <h1 class="giant-text">Long</h1>
+                <h1 class="giant-text outline">Le</h1>
+                
+            </div>
+            <div class="hero-bottom">
+                <p class="hero-bio">Electrical & Computer Engineering at USC. Formerly Data Science at UCSD. I bridge the gap between complex hardware systems and intelligent software architecture.</p>
+                <div class="hero-location">LOS ANGELES, CA</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">01 / Background</h2>
+            <div class="bento-grid-about">
+                <div class="bento-card about-main hover-target">
+                    <span class="card-label">The Mission</span>
+                    <h3>I build data-driven software that solves physical-world problems.</h3>
+                    <p>Currently pursuing my M.S. at USC. My work sits at the intersection of high-performance computing and actionable data science.</p>
+                </div>
+                <div class="bento-card education hover-target">
+                    <span class="card-label">Education</span>
+                    <div class="edu-item">
+                        <strong>University of Southern California</strong>
+                        <p>M.S. Electrical & Computer Engineering</p>
+                    </div>
+                    <div class="edu-item">
+                        <strong>UC San Diego</strong>
+                        <p>B.S. Data Science</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="section" id="about">
-        <div class="sub-section"><p class="about-headline">About</p></div>
-        <div class="sub-section">
-            <p class="about-paragraph">Hi! I'm Long Le. I am currently an Electrical & Computer Engineering graduate student at University of Southern California. 
-                Prior to this, I obtained a bachelor's degree in Data Science from UC San Diego.</p>
-            <p class="about-paragraph">This portfolio showcases my academic journey, interests, and practical projects over the years.</p>
-            <p class="about-paragraph">I am excited to contribute my abilities to a dynamic field and collaborate with talented individuals to create impactful solutions.</p>
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">02 / Featured Work</h2>
+            
+            <div class="project-bento">
+                <div class="project-card wide hover-target">
+                    <div class="project-content">
+                        <span class="card-label">Graph Architecture</span>
+                        <h3 class="project-title">Solar Cell Manufacturing</h3>
+                        <p>Designed a Neo4j graph database to optimize solar cell efficiency, transforming raw JSON streams into structured batch analysis pipelines.</p>
+                        <div class="tech-tags">
+                            <span>Python</span><span>Neo4j</span><span>Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rtvo20/dsc180_capstone_q2" target="_blank">View GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-img-box">
+                        <img src="static/perovskite.png" alt="Graph Database">
+                    </div>
+                </div>
+
+                <div class="project-card tall hover-target">
+                    <div class="project-content">
+                        <span class="card-label">Full Stack Automation</span>
+                        <h3 class="project-title">SpotiTube Sync</h3>
+                        <p>Automated playlist migration tool using OAuth 2.0. Features a background scheduler for daily synchronization.</p>
+                        <div class="tech-tags">
+                            <span>Flask</span><span>OAuth 2.0</span><span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/longquangle/spotitube" target="_blank">View GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-img-box">
+                        <img src="static/spotitube.jpeg" alt="SpotiTube">
+                    </div>
+                </div>
+
+                <div class="project-card tall hover-target">
+                    <div class="project-content">
+                        <span class="card-label">Data Visualization</span>
+                        <h3 class="project-title">Casualty Analysis</h3>
+                        <p>Interactive D3.js mapping and feature engineering to extract geological patterns from casualty data.</p>
+                        <div class="tech-tags">
+                            <span>D3.js</span><span>SQLite3</span><span>BS4</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://longquangle.github.io/vietnam-war-casualty-visualization/" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-img-box">
+                        <img src="static/vnwar.png" alt="Data Viz">
+                    </div>
+                </div>
+
+                <div class="project-card wide hover-target">
+                    <div class="project-content">
+                        <span class="card-label">Tooling</span>
+                        <h3 class="project-title">Desktop PDF Utility</h3>
+                        <p>Lightweight Python application for batch processing. Built with a custom Tkinter GUI for seamless file management.</p>
+                        <div class="tech-tags">
+                            <span>Python</span><span>PyPDF2</span><span>Tkinter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/longquangle/pdf_merger_exe" target="_blank">Download App</a>
+                        </div>
+                    </div>
+                    <div class="project-img-box">
+                        <img src="static/pdfmerger.png" alt="PDF UI">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="section" id="projects">
-        <div class="sub-section"><p class="about-headline">Projects</p></div>
-        <div class="sub-section">
-            <div class="project">
-                <p><span class="project-name">Graph Databases for Perovskite Solar Cell Manufacturing</span> <a href="https://lsidarto.github.io/perovskite-graph-database/" class="link">Website</a> <a href="https://github.com/rtvo20/dsc180_capstone_q2" class="link">GitHub Repo</a></p>
-                <p class="project-tech project-line-spacing project-paragraph">Language/Framework: <span class="tech">Python</span>, <span class="tech">Neo4j</span> (database), <span class="tech">pandas</span> (data processing)</p>
-                <p class="project-description project-line-spacing project-paragraph">Description: Designed and built a graph database for a solar cell research lab, allowing analysis of large data volumes across batches to optimize solar cell efficiency. Collaborate with a groupmate to implement a data pipeline to transform the lab's raw JSON output to database's input.</p>
-                <a href="https://lsidarto.github.io/perovskite-graph-database/"><img class="project-img" src="static/perovskite.png" alt=""></a>
-            </div>
-            <div class="project">
-                <p><span class="project-name">SpotiTube</span> <a href="https://www.youtube.com/watch?v=9ewDaibJfQA" class="link">Demo Video</a> <a href="https://github.com/longquangle/spotitube" class="link">GitHub Repo</a></p>
-                <p class="project-tech project-line-spacing project-paragraph">Language/Framework: <span class="tech">Python</span>, <span class="tech">Flask</span> (web framework), <span class="tech">OAuth 2.0</span>, <span class="tech">REST API</span></p>
-                <p class="project-description project-line-spacing project-paragraph">Description: Full stack web appplication to transfer and continuously update a playlist from Spotify to YouTube Music. The app follows standard OAuth 2.0 flow to securely log in the users from both Spotify and Google. Everyday, the app's scheduler periodically scans the selected playlist and updates newly added songs to YouTube Music.</p>
-                <a href="https://github.com/longquangle/spotitube"><img class="project-img" src="static/spotitube.jpeg" alt=""></a>
-            </div>
-            <div class="project">
-                <p><span class="project-name">Vietnam War Veterans</span> <a href="https://longquangle.github.io/vietnam-war-casualty-visualization/" class="link">Visualization</a> <a href="https://longquangle.github.io/vnwarproject/" class="link">Python Notebook</a> <a href="https://longqle.pythonanywhere.com" class="link">Database</a></p>
-                <p class="project-tech project-line-spacing project-paragraph">Language/Framework: <span class="tech">Python</span>, <span class="tech">pandas</span> (analysis), <span class="tech">JavaScript</span> (visualization), <span class="tech">D3.js</span> (visualization), <span class="tech">BeautifulSoup4</span> (web scraping), <span class="tech">Flask</span> (database backend), <span class="tech">SQLite3</span> (database)</p>
-                <p class="project-description project-line-spacing project-paragraph">Description (Analysis): Web scraped using BeautifulSoup to obtain the data. Performed exploratory data analysis and feature engineering to extract geological patterns in casualties. Utilized D3.js to visualize and plot different maps and charts on the website.</p>
-                <p class="project-description project-line-spacing project-paragraph">Description (Database): Designed schema table and imported the raw data to SQLite3 database. Built a website using Flask framework to query for multiple keywords search in SQLite.</p>
-                <a href="https://longquangle.github.io/vietnam-war-casualty-visualization/"><img class="project-img" src="static/vnwar.png" alt=""></a>
-            </div>
-            <div class="project">
-                <p><span class="project-name">PDF Merger</span> <a href="https://longquangle.github.io/pdf_merger_source/" class="link">Website</a> <a href="https://github.com/longquangle/pdf_merger_exe" class="link">Download</a></p>
-                <p class="project-tech project-line-spacing project-paragraph">Language/Framework: <span class="tech">Python</span>, <span class="tech">PyPDF2</span> (Python library), <span class="tech">Tkinter</span> (GUI)</p>
-                <p class="project-description project-line-spacing project-paragraph">Description: A light Python application to combine multiple PDF files into a single file. The app offers batch processing, customizable file order, and a user-friendly interface.</p>
-                <a href="https://longquangle.github.io/pdf_merger_source/"><img class="project-img" src="static/pdfmerger.png" alt=""></a>
-            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LONG LE. ENGINEERED WITH PRECISION.</p>
         </div>
-    </div>
+    </footer>
+
+    <script>
+        const dot = document.getElementById('cursor-dot');
+        const follower = document.getElementById('cursor-follower');
+        const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // The dot must be immediate for precision
+            dot.style.left = mouseX + 'px';
+            dot.style.top = mouseY + 'px';
+        });
+
+        // The follower uses "lerp" (linear interpolation) for that smooth lag
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.12;
+            followerY += (mouseY - followerY) * 0.12;
+            
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                follower.classList.add('active');
+                dot.classList.add('active');
+            });
+            target.addEventListener('mouseleave', () => {
+                follower.classList.remove('active');
+                dot.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
